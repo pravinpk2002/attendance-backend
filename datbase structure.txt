@@ -1,0 +1,79 @@
+
+mysql> show tables;
++----------------------+
+| Tables_in_attendance |
++----------------------+
+| admin                |
+| attendance           |
+| students             |
+| teacher              |
+| users                |
++----------------------+
+5 rows in set (0.00 sec)
+
+mysql> desc admin;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| eid    | int          | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(255) | NO   |     | NULL    |                |
+| gender | char(1)      | NO   |     | NULL    |                |
+| email  | varchar(255) | NO   | MUL | NULL    |                |
+| mob_no | bigint       | YES  |     | NULL    |                |
+| salary | double(5,2)  | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc attendance;
++---------+------+------+-----+---------+-------+
+| Field   | Type | Null | Key | Default | Extra |
++---------+------+------+-----+---------+-------+
+| rollNo  | int  | NO   | PRI | NULL    |       |
+| present | int  | YES  |     | NULL    |       |
+| absent  | int  | YES  |     | NULL    |       |
++---------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc students;;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| rollNo        | int          | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(255) | NO   |     | NULL    |                |
+| gender        | char(1)      | NO   |     | NULL    |                |
+| mob_No        | bigint       | YES  |     | NULL    |                |
+| email         | varchar(255) | NO   | MUL | NULL    |                |
+| Date_of_birth | date         | NO   |     | NULL    |                |
+| address       | text         | NO   |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+ERROR:
+No query specified
+
+mysql> desc teacher;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| eid        | int          | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(255) | NO   |     | NULL    |                |
+| subject    | varchar(255) | YES  |     | NULL    |                |
+| experience | int          | NO   |     | NULL    |                |
+| salary     | double(5,2)  | NO   |     | NULL    |                |
+| mob_no     | bigint       | YES  |     | NULL    |                |
+| email      | varchar(255) | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> desc users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int          | NO   | UNI | NULL    | auto_increment |
+| userId   | varchar(255) | NO   | PRI | NULL    |                |
+| role     | varchar(255) | NO   |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql>
