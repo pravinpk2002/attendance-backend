@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "attendance-backend",
   "version": "1.0.0",
   "description": "",
@@ -17,4 +18,23 @@
     "express": "^4.21.2",
     "mysql2": "^3.11.5"
   }
+=======
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "attendance-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+>>>>>>> f931d73b42c1d57634e33ad2c865b92283b435ad
 }
